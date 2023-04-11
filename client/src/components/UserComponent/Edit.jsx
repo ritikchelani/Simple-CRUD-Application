@@ -30,7 +30,7 @@ function Edit() {
 
   function Update(e) {
     e.preventDefault();
-    axios.put(`/UpdateUser/${id}`, data).then(navigate("/"));
+    axios.put(`/api/UpdateUser/${id}`, data).then(navigate("/"));
   }
   return (
     <div className="w-screen h-full flex flex-col justify-center items-center mt-16">

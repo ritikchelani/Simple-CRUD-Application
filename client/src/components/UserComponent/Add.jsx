@@ -19,7 +19,7 @@ function Add() {
 
   function submitForm(e) {
     e.preventDefault();
-    axios.post("/CreateUser", data).then(navigate("/"));
+    axios.post("/api/CreateUser", data).then(navigate("/"));
   }
   return (
     <div className="w-screen h-full flex flex-col justify-center items-center mt-16">

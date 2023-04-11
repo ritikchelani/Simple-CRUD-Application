@@ -11,7 +11,7 @@ function Edit() {
   const { id } = useParams();
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/GetUser/${id}`).then((res) => {
+    axios.get(`GetUser/${id}`).then((res) => {
       setName(res.data.Name);
       setMobile(res.data.Mobile);
       setHometown(res.data.Hometown);
@@ -30,7 +30,7 @@ function Edit() {
 
   function Update(e) {
     e.preventDefault();
-    axios.put(`http://localhost:5000/UpdateUser/${id}`, data).then(navigate("/"));
+    axios.put(`UpdateUser/${id}`, data).then(navigate("/"));
   }
   return (
     <div className="w-screen h-full flex flex-col justify-center items-center mt-16">

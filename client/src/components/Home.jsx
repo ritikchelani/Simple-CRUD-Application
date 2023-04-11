@@ -6,7 +6,7 @@ function Home() {
   const [users, setUsers] = useState();
 
   function loadUsers() {
-    axios.get("http://localhost:5000/AllUsers").then((res) => {
+    axios.get("AllUsers").then((res) => {
         setUsers(res.data.data.reverse());
     });
   }
@@ -16,7 +16,7 @@ function Home() {
   }, []);
 
   function deleteUser(id) {
-    axios.delete(`http://localhost:5000/DeleteUser/${id}`).then(window.location.reload());
+    axios.delete(`DeleteUser/${id}`).then(window.location.reload());
   }
 
   return (

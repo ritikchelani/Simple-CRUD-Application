@@ -17,7 +17,7 @@ process.on('uncaughtException', err => {
 
 
 const server = app.listen(process.env.PORT || 5000, () => {
-    console.log(`Server started on PORT: ${process.env.PORT}`)
+    console.log(`Server started on PORT: ${process.env.PORT || 5000}`)
 })
 
 
